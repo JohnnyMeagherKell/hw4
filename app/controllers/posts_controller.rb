@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     if @current_user
       @post = Post.new
       @post.place_id = params["place_id"]
+      @post.user_id = @current_user["id"]
     else
       flash["notice"] = "Login first."
     end

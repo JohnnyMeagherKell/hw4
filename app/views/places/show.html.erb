@@ -3,9 +3,11 @@
 <% if @current_user %>
   <h2>My Posts</h2>
   <% for post in @posts %>
-    <h3><%= post["title"] %></h3>
-    <h4><%= post["posted_on"] %></h4>
-    <p><%= post["description"] %></p>
+    <% if post["user_id"] = @current_user %>
+      <h3><%= post["title"] %></h3>
+      <h4><%= post["posted_on"] %></h4>
+      <p><%= post["description"] %></p>
+    <% end %>
   <% end %>
 
   <p>
