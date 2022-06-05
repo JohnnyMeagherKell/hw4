@@ -11,18 +11,18 @@ class SessionsController < ApplicationController
         redirect_to "/places"
       else
         flash["notice"] = "Incorrect Password"
-        redirect_to "/sessions/new"
+        redirect_to "/login"
       end
     else
       flash["notice"] = "No account with this address"
-      redirect_to "/sessions/new"
+      redirect_to "/login"
     end
   end
 
   def destroy
     session["user_id"] = nil
     flash["notice"] = "Goodbye."
-    redirect_to "/sessions/new"
+    redirect_to "/login"
   end
 end
   
