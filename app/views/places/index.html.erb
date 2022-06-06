@@ -1,14 +1,14 @@
 
 <div class="container">
-  <h1>Places</h1>
-
+  <h2>Places</h2>
+  <div class="m-3">
   <% if @current_user %>
   <ul>
     <% for place in @places %>
       <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
     <% end %>
   </ul>
-
+  </div>
   <p>
     <a class="btn btn-primary" href="/places/new">New place</a>
   </p>

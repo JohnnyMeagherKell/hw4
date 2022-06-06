@@ -1,13 +1,13 @@
 <div class="container">
-<h1>New Place</h1>
+<h2>New Place</h2>
 
 <%= form_with :model => @place do |form| %>
   <p>
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
+    <%= form.label "name", :class => "form-label" %>
+    <%= form.text_field "name", :class => "form-control" %>
   </p>
-  <p class="btn btn-success">
-    <%= form.submit %>
+  <p>
+    <%= form.submit :class =>"btn btn-primary" %>
   </p>
 <% end %>
 </div>
