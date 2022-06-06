@@ -1,4 +1,4 @@
-<div class="container">
+
 <h1><%= @place["name"] %></h1>
 
 <% if @current_user %>
@@ -7,6 +7,9 @@
     <% if post["user_id"] = @current_user %>
       <h3><%= post["title"] %></h3>
       <h4><%= post["posted_on"] %></h4>
+      <% if post.uploaded_image.attached? %>
+        <p><img scr="<%= url_for(post.uploaded_image) %>"></p>
+      <% end %>
       <p><%= post["description"] %></p>
     <% end %>
   <% end %>
@@ -22,4 +25,3 @@
   
 <a href="/places">Back to All Places</a>
 </p>
-</div>
