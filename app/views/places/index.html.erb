@@ -1,15 +1,17 @@
-<h1>Places</h1>
+<div class="container">
+  <h1>Places</h1>
 
-<% if @current_user %>
-<ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+  <% if @current_user %>
+  <ul>
+    <% for place in @places %>
+      <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+    <% end %>
+  </ul>
+
+  <p>
+    <a class="btn btn-primary" href="/places/new">New place</a>
+  </p>
+  <% else %>
+  You must first <a href="/login">login</a> to view places.
   <% end %>
-</ul>
-
-<p>
-  <a href="/places/new">New place</a>
-</p>
-<% else %>
-You must first <a href="/login">login</a> to view places.
-<% end %>
+</div>
