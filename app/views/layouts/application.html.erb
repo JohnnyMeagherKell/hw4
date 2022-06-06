@@ -10,9 +10,11 @@
 <div class="text-bg-dark p-3">
   <body>
   <div class="position-relative">
-  <div class="d-flex justify-content-center"><h1>Travel Log</h1></div>
+  <div class="d-flex justify-content-center"><h1>Travel Log</h1>
+  <img src="https://media.istockphoto.com/photos/travel-planning-background-picture-id1309040743?b=1&k=20&m=1309040743&s=170667a&w=0&h=eyIzT1oSW2B5gPMPqgybEseIYIUrY96cxPTE_B0ewVs=" width="100" height="60">
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,7 +25,7 @@
          
         <span class="navbar-text">
           <% if @current_user %>
-            <li class="nav-item ">Logged in as: <%= @current_user["username"] %>       <a class="btn btn-danger"class="btn btn-danger" href="/logout">Logout</a> </li>
+            <li class="nav-item text-white">Logged in as: <%= @current_user["username"] %>       <a class="btn btn-outline-danger" href="/logout">Logout</a> </li>
           <% else %>
             <a class="btn btn-info" href="/login">Login</a>
             <a class="btn btn-outline-info" href="/users/new">Signup</a>
